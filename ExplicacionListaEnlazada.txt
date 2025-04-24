@@ -1,0 +1,8 @@
+Una lista enlazada se compone por nodos y cada nodo contiene datos o una referencia al siguiente nodo.
+Primero creamos la clase nodo $tarea es la que almacena el nombre de la tarea y el $siguiente apunta al siguiente nodo en la lista (inicialmente null lo que indica que es el ultimo nodo de la lista).
+Tenemos el método constructor el cual es __ construct($tarea) este es el constructor de la clase nodo, cuando se crea un nuevo nodo se le pasa una tarea, que es almacenada en la propiedad $tarea. La propiedad $siguiente se inicializa como null, ya que en ese momento el nodo no tiene un siguiente nodo.
+Tenemos la clase ListaTareas esta gestiona toda la lista enlazada, esta clase contiene los métodos para agregar tareas a la lista y para mostrar las tareas en formato HTML.
+$inicio: apunta al primer nodo de la lista, inicialmente es null porque la lista comienza vacía. Y nuevamente tenemos un constructor de la clase ListaTareas inicializa la propiedad $inicio como null, lo que indica que la lista está vacía al principio.
+Método agregarTarea este método permite agregar una tarea al final de la lista, crea un nuevo nodo con la tarea proporcionada si $inicio es null, significa que la lista está vacía y el nuevo nodo será el primer nodo de la lista, si la lista no esta vacía, se recorre la lista desde el primer nodo ($inicio) hasta encontrar el ultimo nodo (donde $siguiente es null).
+Método mostrarTareas Este método recorre la lista y muestra todas las tareas en formato HTML
+Crear una instancia y usar la lista: Aquí es donde se crean las tareas y se muestran en la página web.
