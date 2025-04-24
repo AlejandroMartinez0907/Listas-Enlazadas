@@ -21,21 +21,23 @@ class ListaTareas {
         if ($this->inicio === null) {
             $this->inicio = $nuevoNodo;
         } else {
-            $nodoActual = $this->inicio;
-            while ($nodoActual->siguiente !== null) {
-                $nodoActual = $nodoActual->siguiente;
+            $actual = $this->inicio;
+            while ($actual->siguiente !== null) {
+                $actual = $actual->siguiente;
             }
-            $nodoActual->siguiente = $nuevoNodo;
+            $actual->siguiente = $nuevoNodo;
         }
     }
 
-    public function mostrarTareas() {
-        $nodoActual = $this->inicio;
+    public function imprimirHTML(){
+        $actual = $this->inicio;
         echo "<h2>Lista de Tareas</h2><ul>";
-        while ($nodoActual !== null) {
-            echo "<li>" . htmlspecialchars($nodoActual->tarea) . "</li>";
-            $nodoActual = $nodoActual->siguiente;
+
+        while ($actual != null) {
+            echo "<li>" . htmlspecialchars($actual->tarea) . "</li>";
+            $actual = $actual->siguiente;
         }
+
         echo "</ul>";
     }
 }
@@ -44,7 +46,7 @@ $listaTareas = new ListaTareas();
 
 $listaTareas->agregarTarea("Comprar leche");
 $listaTareas->agregarTarea("Ir al gimnasio");
-$listaTareas->agregarTarea("Llamar a mamá");
-$listaTareas->mostrarTareas();
+$listaTareas->agregarTarea("Pasear a la mascota");
 
+$listaTareas->imprimirHTML();
 ?>
