@@ -1,4 +1,4 @@
-<?php
+<?php 
 class Nodo {
     public $tarea;
     public $siguiente;
@@ -34,7 +34,7 @@ class ListaTareas {
         echo "<h2>Lista de Tareas</h2><ul>";
 
         while ($actual != null) {
-            echo "<li>" . htmlspecialchars($actual->tarea) . "</li>";
+            echo "<li>" . $actual->tarea . "</li>";  
             $actual = $actual->siguiente;
         }
 
@@ -44,9 +44,9 @@ class ListaTareas {
 
 $listaTareas = new ListaTareas();
 
-$listaTareas->agregarTarea("Comprar leche");
+$listaTareas->agregarTarea("Hacer mercado");
 $listaTareas->agregarTarea("Ir al gimnasio");
-$listaTareas->agregarTarea("Pasear a la mascota");
+$listaTareas->agregarTarea("Pasear a la mascota ");
 
 $listaTareas->imprimirHTML();
 ?>
